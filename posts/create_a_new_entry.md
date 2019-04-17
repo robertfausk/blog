@@ -9,7 +9,9 @@
 
 * You need to upload file separatly
 * and link it in your blog post
-* e.g.: ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+* Example with image uploaded in repository:
+![Exmaple image](image_create_blog_post_example.png)
+* Example with external image: ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 
 # Structured documents
