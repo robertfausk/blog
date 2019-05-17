@@ -1,4 +1,4 @@
-# How to create a new blog post entry
+# How to create a new blog post entry?
 
 * simply create a new file
 * add some content 
