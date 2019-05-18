@@ -1,12 +1,12 @@
 blogs:
-    "create-a-new-entry":
+    "create-a-new-entry.md":
         title: How to create a new blog post entry?
         published: 2019-04-20
         preview: |
             You want to create a new blog post entry? 
             Look here for detailed information on how to use markup and add images etc.
         category: news
-    "new-blog-entry":
+    "new-blog-entry.md":
         title: New blog entry
         published: 2019-04-17
         preview: |
