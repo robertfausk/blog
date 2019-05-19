@@ -4,7 +4,7 @@ blogs:
         published: 2019-05-19
         preview: |
             Narf! Zorp! **Eyh brain**
-        category: news, Symfony, symfony,Grafana,GitHub
+        category: News, Symfony, symfony,Grafana,GitHub
     "create-a-new-entry.md":
         title: How to create a new blog post entry?
         published: 2019-04-20
@@ -17,4 +17,4 @@ blogs:
         published: 2019-04-17
         preview: |
             Just a new blog entry for test purposes!
-        category: news
+        category: News
