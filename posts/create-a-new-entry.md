@@ -12,7 +12,8 @@
 * Example with image uploaded in repository:
 ![Exmaple image](image_create_blog_post_example.png)
 ![Exmaple image](images/narf/image_create_blog_post_example.png)
-<img src="image_create_blog_post_example.png" style="max-width: 100px; float: right;"/>
+<img src="image_create_blog_post_example.png" width="100" style="max-width: 100px;float: right;"/>
+
 * Example with external image: ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 
