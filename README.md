@@ -1,4 +1,4 @@
-# Blog entries for blog - just as an state of proof
+# Blog entries for blog - just as a state of proof
 
 Blog will be shown on:
 
