@@ -1,6 +1,6 @@
 blogs:
     "test-categories.md":
-        title: I'm a test for two categories and misspelled categories firlefanz
+        title: ''
         published: 2020-12-19
         preview: |
             Narf! Zorp! **Eyh brain**
@@ -15,6 +15,6 @@ blogs:
     "new-blog-entry.md":
         title: New blog entry
         published: 2019-04-17
-        preview: |
-            Just a new blog entry for test purposes!
+        preview: | #Just a new blog entry for test purposes!
+            ''
         category: News
