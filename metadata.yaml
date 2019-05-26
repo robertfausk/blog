@@ -1,4 +1,9 @@
 blogs:
+    "business-metrics.md":
+        title: 'Business metrics'
+        preview: |
+            ''
+        category: Grafana, Prometheus, Filebeat, Heartbeat, Kibana, Monitoring, Zabbix, Insights
     "test-categories.md":
         title: ''
         published: 2020-12-19
