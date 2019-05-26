@@ -1,13 +1,29 @@
-Vorgehen bei Fehler im Live-/Stage-System
+# Business metrics
+
+## Intro use case
+
+Approach when error in live/stage orrcurs:
 
 1) Grafana 
-2) Kibana https://www.elastic.co/de/products/kibana
-3) Sentry https://sentry.io/
+2) Kibana
+3) Sentry
+
+## Kibana 
+
+- https://www.elastic.co/de/products/kibana
+- see all logs
+- easy search and filter logs
+
+## Sentry
+
+- https://sentry.io/
+- see exceptions in code
 
 ## Prometheus
 
-- sammelt Metriken periodisch ein
-- setzt timestamps selbst, da es die Abfrage selber macht
+- crawls metrics periodically
+- timeshift https://grafana.com/blog/categories/timeshift/
+- sets timestamps on its own cause it's making requests on its own
 - uses OpenMetrics format https://openmetrics.io/
 - provides API for Grafana
 - deletes old data automatically
@@ -50,6 +66,8 @@ https://grafana.com/
 - provides dashboard 
 - provides alerting
 -- notification possible via webhooks
+-- make a call, send a sms etc.
+-- create a ticket in redmine
 - allows easy setting of markers (e.g. for feature toggle on, deployment, DDOS attack, cache deleted, sent >10000 newsletter)
 -- deployment example: increased response time because there is more crawling from crawler. They crawl more cause there is a very low response time while page is in maintenance mode
 - markers can also be set via command in Slack
@@ -60,19 +78,26 @@ https://grafana.com/
 -- data sources
 -- apps (also Zabbix)
 - provides easy filtering and dividing
--- e.g. of users by 
+- examples:
+-- divide app users by 
 --- being google
 --- being from client company
 --- being from own company
 --- being a bot (which can also be filtered and divided)
--- e.g. "HTTP status code > 400 and only users"
--- e.g. backend sessions and frontend sessions
-- all you can think of which is measurable
+-- "HTTP status code > 400 and only users"
+-- top 5 errors
+-- backend sessions and frontend sessions
+-- google page speed
+-- all you can think of which is measurable
+- practical hints:
+-- connect mysql via replication or secured via iptables or at least basic auth
+-- also monitor min load (or other min values)
+-- use twilio for calls (1$/month) or use FritzBox (free but more initial work load)
 
 Concerning DSGVO:
 when used for stability of application then it's OK
 
-Using in example company:
+Usage in example company:
 - provide one dashboard per client
 - client gets access and introduction to grafana for each panel and each defined treshold
 - offer opt out because of data security reasons
@@ -81,9 +106,30 @@ Using in example company:
 - saves time of calling (or writing a mail) in error case
 - write down added value in offer/contract for client
 
+## Filebeat
+
+- https://www.elastic.co/de/products/beats/filebeat
+- also Heartbeat https://www.elastic.co/de/products/beats/heartbeat
+- suggestion: use native in OS so that not everything is mounted
+- mind:
+-- max limit of request
+-- goes through all logs on startup
+1) getting streams; log output; need to provide path to log for import
+2) preparse data if wished to
+3) define target where to deliver to, e.g. deliver to Logstash
+
+## Logstash
+
+- https://www.elastic.co/products/logstash
+- filter data
+- change respective enrich data:
+-- using "geoip"
+-- using "grok", it's like regex; used for log lines of e.g. apache
+https://grokconstructor.appspot.com/do/match or http://grokdebug.herokuapp.com/
 
 
-Conclusion:
+## Conclusion
+
 In application there is more going wrong than unexpected.
 Backgrounds are revealed.
 Application is much more stable.
