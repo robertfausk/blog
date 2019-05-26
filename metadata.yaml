@@ -4,6 +4,7 @@ blogs:
         preview: |
             ''
         category: Grafana, Prometheus, Filebeat, Heartbeat, Kibana, Monitoring, Zabbix, Insights
+        published: 2019-05-26
     "test-categories.md":
         title: ''
         published: 2020-12-19
