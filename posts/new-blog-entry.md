@@ -1,3 +1,9 @@
+---
+title: I am a new blog entry
+categories: bla, blubb, co
+---
+
+
 # new blog entry
 
 
