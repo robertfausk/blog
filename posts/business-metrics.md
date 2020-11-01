@@ -12,7 +12,7 @@ Approach when error in live/stage orrcurs:
 
 - https://www.elastic.co/de/products/kibana
 - see all logs
-- easy search and filter logs
+- easy search and filter logs - YAY!
 
 ## Sentry
 
